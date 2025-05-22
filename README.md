@@ -1,3 +1,47 @@
+# TTP Frontend Template
+
+This is a project repository containing React + Typescript + Vite + React-bootstrap template.
+
+First, make sure you have installed Node.js, preferrably version 20 above. Can check whether node has been installed by running the command:
+
+```cmd
+node --version
+```
+If you have not installed Node.js, please install it [here](https://nodejs.org/en/download/).
+
+Second, for our package manager, we are using npm. Make sure that npm version is the latest by running:
+
+```cmd
+npm install -g npm
+```
+
+Third, install all packages required for this project to run:
+
+```cmd
+npm install
+```
+
+And run the project:
+
+```cmd
+npm run dev
+```
+Your project should be running on `localhost:3000`.
+
+## Project Initialization
+
+Steps to initialize this project from scratch:
+
+```cmd
+npm create vite@latest my-react-app --template react-ts # Create React project which includes Vite and Typescript support
+npm install # Install dependencies
+npm install react-bootstrap # Install react-bootstrap library
+```
+
+## Useful Links
+
+React-Bootstrap library: https://react-bootstrap.netlify.app/docs/getting-started/introduction
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
