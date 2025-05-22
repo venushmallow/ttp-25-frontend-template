@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { fetchUserProfile } from '../../common/api';
 
 const LoginPage = () => {
     const [user, setUser] = useState({
@@ -24,6 +25,11 @@ const LoginPage = () => {
 
     const onSubmit = () => {
         console.log(`signing up: ${user.email} ${user.password}`)
+    }
+
+    const onCall = async () => {
+        const userProfile = await fetchUserProfile();
+        console.log(`calling BE, received user profile: ${JSON.stringify(userProfile)}`)
     }
 
     return (
@@ -61,6 +67,13 @@ const LoginPage = () => {
                 onClick={onSubmit}
             >
                 Sign Up
+            </Button>
+
+            <Button
+                variant="secondary"
+                onClick={onCall}
+            >
+                Check user profile
             </Button>
         </Form>
     );
